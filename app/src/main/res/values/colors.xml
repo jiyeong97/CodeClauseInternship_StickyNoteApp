@@ -9,4 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="btnGreen">#4CAF50</color>
     <color name="grey">#758AA2</color>
+    <color name="noteYellow">#FFE770</color>
+    <color name="noteRed">#FEA895</color>
+    <color name="noteBlue">#96D4EF</color>
+    <color name="noteGreen">#C2EE97</color>
 </resources>
