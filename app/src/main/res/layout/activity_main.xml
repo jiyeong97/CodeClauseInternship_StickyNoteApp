@@ -20,6 +20,7 @@
         android:layout_alignParentEnd="true"
         android:layout_margin="24dp"
         android:src="@drawable/plusicon"
+        android:tint="@android:color/white"
         app:backgroundTint="@color/btnGreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

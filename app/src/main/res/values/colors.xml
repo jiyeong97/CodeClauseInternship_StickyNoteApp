@@ -13,4 +13,5 @@
     <color name="noteRed">#FEA895</color>
     <color name="noteBlue">#96D4EF</color>
     <color name="noteGreen">#C2EE97</color>
+    <color name="backgroundWhite">#F3F3F3</color>
 </resources>
