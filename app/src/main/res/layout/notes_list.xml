@@ -38,7 +38,7 @@
         <TextView
             android:id="@+id/textView_notes"
             android:text="Notes"
-            android:textColore="@color/black"
+            android:textColor="@color/black"
             android:textSize="14sp"
             android:textStyle="normal"
             android:maxLines="10"
@@ -48,7 +48,7 @@
         <TextView
             android:id="@+id/textView_date"
             android:text="Date"
-            android:textColore="@color/grey"
+            android:textColor="@color/grey"
             android:singleLine="true"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
