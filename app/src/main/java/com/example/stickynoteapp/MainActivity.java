@@ -59,10 +59,21 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public boolean onQueryTextChange(String s) {
+            public boolean onQueryTextChange(String newText) {
+                filter(newText);
                 return false;
             }
         });
+    }
+
+    private void filter(String newText) {
+        List<Notes> filteredList = new ArrayList<>();
+        for(Notes singleNote : notes){
+            if(singleNote.getTitle().toLowerCase().contains(newText.toLowerCase())
+            || singleNote.getNotes().toLowerCase().contains(newText.toLowerCase())){
+                filteredList.add(singleNote);
+            }
+        }
     }
 
     @Override
