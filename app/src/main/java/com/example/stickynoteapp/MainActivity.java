@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
 
 import com.example.stickynoteapp.Adapters.NotesListAdapter;
 import com.example.stickynoteapp.Daatabase.RoomDB;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     List<Notes> notes = new ArrayList<>();
     RoomDB database;
     FloatingActionButton fab_add;
+    SearchView searchView_home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycler_home);
         fab_add = findViewById(R.id.fab_add);
+        searchView_home = findViewById(R.id.searchView_home);
 
         database = RoomDB.getInstance(this);
         notes = database.mainDAO().getAll();
@@ -46,6 +49,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, NotesTakerActivity.class);
                 startActivityForResult(intent, 101);
+            }
+        });
+
+        searchView_home.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
             }
         });
     }
